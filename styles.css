@@ -1,0 +1,161 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-m: hsl(217, 54%, 11%);
+  --very-dark-blue-c: hsl(216, 50%, 16%);
+  --very-dark-blue-l: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--very-dark-blue-m);
+  min-height: 100vh;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--very-dark-blue-c);
+  max-width: 350px;
+  padding: 24px;
+  border-radius: 15px;
+  box-shadow: 0px 20px 25px 15px rgba(0, 0, 0, 0.05),
+    0px 40px 30px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+.card-product-img {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card-product-img::after {
+  content: url(./images/icon-view.svg);
+  background: var(--cyan);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+
+.card-product-img:hover::after {
+  opacity: 0.5;
+}
+
+.card-product-img img {
+  width: 100%;
+  display: block;
+}
+
+.card-body {
+  padding: 23px 0;
+  border-bottom: 1px solid var(--very-dark-blue-l);
+  margin-bottom: 15px;
+}
+
+.card-title {
+  color: var(--white);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.card-title:hover {
+  color: var(--very-dark-blue-l);
+}
+
+.card-text {
+  color: var(--soft-blue);
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 23px;
+  font-weight: 300;
+}
+
+.card-body .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-price,
+.card-countdown {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.card-price {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.card-icon {
+  margin-right: 6px;
+}
+
+.card-countdown {
+  color: var(--soft-blue);
+  font-weight: 400;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.card-footer p {
+  color: var(--soft-blue);
+}
+
+.card-author-img {
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid var(--white);
+  border-radius: 50px;
+  margin-right: 15px;
+}
+
+.card-author-name {
+  color: var(--white);
+}
+
+.card-author-name:hover {
+  color: var(--cyan);
+  cursor: pointer;
+
+}
+
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
